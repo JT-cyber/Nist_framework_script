@@ -1,0 +1,677 @@
+{
+    "NIST 800-160 Goals": [
+      {
+        "name": "Anticipate",
+        "objectives": {
+          "Prevent/Avoid": true,
+          "Prepare": true,
+          "Continue": false,
+          "Constrain": false,
+          "Reconstitute": false,
+          "Understand": true,
+          "Transform": false,
+          "Re-architect": false
+        }
+      },
+      {
+        "name": "Withstand",
+        "objectives": {
+          "Prevent/Avoid": true,
+          "Prepare": true,
+          "Continue": true,
+          "Constrain": true,
+          "Reconstitute": false,
+          "Understand": true,
+          "Transform": false,
+          "Re-architect": false
+        }
+      },
+      {
+        "name": "Recover",
+        "objectives": {
+          "Prevent/Avoid": false,
+          "Prepare": true,
+          "Continue": true,
+          "Constrain": true,
+          "Reconstitute": true,
+          "Understand": true,
+          "Transform": true,
+          "Re-architect": true
+        }
+      },
+      {
+        "name": "Adapt",
+        "objectives": {
+          "Prevent/Avoid": false,
+          "Prepare": true,
+          "Continue": false,
+          "Constrain": false,
+          "Reconstitute": false,
+          "Understand": true,
+          "Transform": true,
+          "Re-architect": true
+        }
+      }
+    ],
+    "NIST 800-160 Stategic design principles": [
+      {
+        "name": "Focus on common critical assets",
+        "Risk response priorities": [
+          "Anticipate",
+          "Withstand",
+          "Recover"
+        ]
+      },
+      {
+        "name": "Support agility and architect for adapability",
+        "Risk response priorities": [
+          "Recover",
+          "Adapt"
+        ]
+      },
+      {
+        "name": "Reduce attack surfaces",
+        "Risk response priorities": [
+          "Anticipate"
+        ]
+      },
+      {
+        "name": "Assume compromised resources",
+        "Risk response priorities": [
+          "Anticipate",
+          "Withstand"
+        ]
+      },
+      {
+        "name": "Expect adversaries to evolve",
+        "Risk response priorities": [
+          "Anticipate",
+          "Adapt"
+        ]
+      }
+    ],
+    "NIST 800-160 Structural Design Principles": [
+      {
+        "name": "limit the need for trust",
+        "strategic design principles": {
+          "focus on common critical assets": false,
+          "support agility and architect for adaptability": false,
+          "reduce attack surfaces": true,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": false
+        }
+      },
+      {
+        "name": "control visibility",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": false,
+          "reduce attack surfaces": true,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": false
+        }
+      },
+      {
+        "name": "contain and exclude behaviours",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": false,
+          "reduce attack surfaces": false,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": true
+        }
+      },
+      {
+        "name": "layer defences and parition resources",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": false,
+          "reduce attack surfaces": false,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": false
+        }
+      },
+      {
+        "name": "plan and manage diversity",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": true,
+          "reduce attack surfaces": false,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": false
+        }
+      },
+      {
+        "name": "maintain redundancy",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": true,
+          "reduce attack surfaces": false,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": false
+        }
+      },
+      {
+        "name": "make resources location-versatile",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": true,
+          "reduce attack surfaces": false,
+          "assume compomised resources": false,
+          "expect adversaries to evolve": true
+        }
+      },
+      {
+        "name": "leverage health and status data",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": true,
+          "reduce attack surfaces": false,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": true
+        }
+      },
+      {
+        "name": "maintain situation awareness",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": false,
+          "reduce attack surfaces": false,
+          "assume compomised resources": false,
+          "expect adversaries to evolve": true
+        }
+      },
+      {
+        "name": "manage resources(risk-) adaptively",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": true,
+          "reduce attack surfaces": false,
+          "assume compomised resources": false,
+          "expect adversaries to evolve": true
+        }
+      },
+      {
+        "name": "maximize transience",
+        "strategic design principles": {
+          "focus on common critical assets": false,
+          "support agility and architect for adaptability": false,
+          "reduce attack surfaces": true,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": true
+        }
+      },
+      {
+        "name": "determine ongoing trustworthiness",
+        "strategic design principles": {
+          "focus on common critical assets": true,
+          "support agility and architect for adaptability": false,
+          "reduce attack surfaces": false,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": true
+        }
+      },
+      {
+        "name": "change or distrupt the attack surface",
+        "strategic design principles": {
+          "focus on common critical assets": false,
+          "support agility and architect for adaptability": false,
+          "reduce attack surfaces": true,
+          "assume compomised resources": true,
+          "expect adversaries to evolve": true
+        }
+      },
+      {
+        "name": "make the effects of deception and unpredictability user-transparent",
+        "strategic design principles": {
+          "focus on common critical assets": false,
+          "support agility and architect for adaptability": true,
+          "reduce attack surfaces": true,
+          "assume compomised resources": false,
+          "expect adversaries to evolve": false
+        }
+      }
+    ],
+    "NIST 800-160 Objectives": [
+      {
+        "name": "Prevent or Avoid",
+        "Description": "Preclude the successful execution of an attack or the realization of adverse conditions.",
+        "Discussion": "This objective relates to an organization’s preferences for different risk response approaches. Risk avoidance or threat avoidance is one possible risk response approach and is feasible under restricted circumstances. Preventing a threat event from occurring is another possible risk response, similarly feasible under restricted circumstances."
+      },
+      {
+        "name": "Prepare",
+        "Description": "Preclude the successful execution of an attack or the realization of adverse conditions",
+        "Discussion": "This objective is driven by the recognition that adversity will occur. It specifically relates to an organization’s contingency planning, continuity of operations plan (COOP), training, exercises, and incident response and recovery plans for critical systems and infrastructures."
+      },
+      {
+        "name": "Continue",
+        "Description": "Maximize the duration and viability of essential mission or business functions during adversity.",
+        "Discussion": "This objective specifically relates to essential functions. Its assessment is aligned with the definition of performance parameters, analysis of functional dependencies, and identification of critical assets. Note that shared services and common infrastructures, while not identified as essential per se, may be necessary to essential functions and, thus, related to this objective."
+      },
+      {
+        "name": "Constrain",
+        "Description": "Limit damage from adversity",
+        "Discussion": "This objective specifically applies to critical or high-value assets—those cyber assets that contain or process sensitive information, are mission-essential, or provide infrastructure services to mission-essential capabilities."
+      },
+      {
+        "name": "Reconstitute",
+        "Description": "Restore as much mission or business functionality as possible after adversity.",
+        "Discussion": "This objective relates to essential functions, critical assets, and the services and infrastructures on which they depend. A key aspect of achieving this objective is ensuring that recovery, restoration, or reconstitution efforts result in trustworthy resources. This objective is not predicated on analysis of the source of adversity (e.g., attribution) and can be achieved even without detection of adversity via ongoing efforts to ensure the timely and correct availability of resources."
+      },
+      {
+        "name": "Understand",
+        "Description": "Maintain useful representations of mission and business dependencies and the status of resources with respect to possible adversity.",
+        "Discussion": "This objective supports the achievement of all other objectives, most notably Prepare, Reconstitute, Transform, and Re-Architect. An organization’s plans for continuous diagnostics and mitigation (CDM), infrastructure services, and other services support this objective. The detection of anomalies, particularly suspicious or unexpected events or conditions, also supports achieving this objective. However, this objective includes understanding resource dependencies and status independent of detection. This objective also relates to an organization’s use of forensics and cyber threat intelligence information sharing."
+      },
+      {
+        "name": "Transform",
+        "Description": "Modify mission or business functions and supporting processes to handle adversity and address environmental changes more effectively.",
+        "Discussion": "This objective specifically applies to workflows for essential functions, supporting processes, and incident response and recovery plans for critical assets and essential functions. Tactical modifications are usually procedural or configuration-related; longer-term modifications can involve restructuring operational processes or governance responsibilities while leaving the underlying technical architecture unchanged."
+      },
+      {
+        "name": "Re-architect",
+        "Description": "Modify architectures to handle adversity and address environmental changes more effectively.",
+        "Discussion": "This objective specifically applies to system architectures and mission architectures,which include the technical architecture of the system-of-systems supporting a mission or business function. In addition, this objective applies to architectures for critical infrastructures and services, which frequently support multiple essential functions."
+      }
+    ],
+    "NIST 800-160 Techniques and Approaches": {
+      "NIST 800-160 Techniques": [
+        {
+          "name": "ADAPTIVE RESPONSE",
+          "definition": "Implement agile courses of action to manage risks.",
+          "Purpose": "Optimize the ability to respond in a timely and appropriate manner to adverse conditions, stresses, attacks, or indicators of these, thus maximizing the ability to maintain mission or business operations, limit consequences, and avoid destabilization.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": true,
+            "Continue": true,
+            "Constrain": true,
+            "Reconstitute": true,
+            "Understand": true,
+            "Transform": false,
+            "Re-Architect": false
+          },
+          "Approaches": [
+            "DYNAMIC RECONFIGURATION",
+            "DYNAMIC RESOURCE ALLOCATION",
+            "ADAPTIVE MANAGEMENT"
+          ]
+        },
+        {
+          "name": "ANALYTIC MONITORING",
+          "defintion": "Monitor and analyze a wide range of properties and behaviors on an ongoing basis and in a coordinated way.",
+          "Purpose": "Maximize the ability to detect potential adverse conditions; reveal the extent of adverse conditions, stresses, or attacks; identify potential or actual damage, and investigate adversary TTPs. Provide the data needed for situational awareness.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": false,
+            "Continue": true,
+            "Constrain": true,
+            "Reconstitute": true,
+            "Understand": true,
+            "Transform": false,
+            "Re-Architect": false
+          },
+          "approaches": [
+            "MONITORING AND DAMAGE ASSESSMENT",
+            "SENSOR FUSION AND ANALYSIS",
+            "FORENSIC AND BEHAVIORAL ANALYSIS"
+          ]
+        },
+        {
+          "name": "CONTEXTUAL AWARENESS",
+          "defintion": "Construct and maintain current representations of the posture of organizational missions or business functions while considering threat events and courses of action.",
+          "Purpose": "Support situational awareness. Enhance understanding of dependencies among cyber and non-cyber resources. Reveal patterns or trends in adversary behavior.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": true,
+            "Continue": true,
+            "Constrain": false,
+            "Reconstitute": true,
+            "Understand": true,
+            "Transform": false,
+            "Re-Architect": false
+          },
+          "approaches": [
+            "DYNAMIC RESOURCE AWARENESS",
+            "DYNAMIC THREAT AWARENESS",
+            "MISSION DEPENDENCY AND STATUS VISUALIZATION"
+          ]
+        },
+        {
+          "name": "COORDINATED PROTECTION",
+          "defintion": "Ensure that protection mechanisms operate in a coordinated and effective manner.",
+          "Purpose": "Require a threat event to overcome multiple safeguards (i.e., employ a strategy of defense-in-depth). In the case of an adversarial threat event, increase the difficulty for an adversary to successfully attack critical resources by increasing the cost to the adversary and raising the likelihood of adversary detection. Regardless of the type of threat event, ensure that the use of any given protection mechanism does not create adverse, unintended consequences by interfering with other protection mechanisms. Validate the realism of cyber courses of action.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": true,
+            "Continue": true,
+            "Constrain": false,
+            "Reconstitute": true,
+            "Understand": true,
+            "Transform": true,
+            "Re-Architect": true
+          },
+          "approaches": [
+            "CALIBRATED DEFENSE-IN-DEPTH",
+            "CONSISTENCY ANALYSIS",
+            "ORCHESTRATION",
+            "SELF-CHALLENGE"
+          ]
+        },
+        {
+          "name": "DECEPTION",
+          "defintion": "Mislead, confuse, hide critical assets from, or expose covertly tainted assets to the adversary.",
+          "Purpose": "Mislead, confuse, or hide critical assets from the adversary, thereby making the adversary uncertain of how to proceed, delaying the effect of the attack, increasing the risk of being discovered, causing the adversary to misdirect or waste its resources, and exposing the adversary tradecraft prematurely.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": false,
+            "Reconstitute": false,
+            "Understand": true,
+            "Transform": false,
+            "Re-Architect": false
+          },
+          "approaches": [
+            "OBFUSCATION",
+            "DISINFORMATION",
+            "MISDIRECTION",
+            "TAINTING"
+          ]
+        },
+        {
+          "name": "DIVERSITY",
+          "defintion": "Use heterogeneity to minimize common mode failures, particularly threat events exploiting common vulnerabilities.",
+          "Purpose": "Limit the possibility of the loss of critical functions due to the failure of replicated common critical components. In the case of an adversarial threat event, cause an adversary to expend more effort by developing malware or other TTPs that are appropriate for multiple targets; increase the probability that the adversary will waste or expose TTPs by applying them to targets for which they are inappropriate; and maximize the probability that some of the defending organization’s systems will survive the adversary’s attack",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": true,
+            "Continue": true,
+            "Constrain": true,
+            "Reconstitute": false,
+            "Understand": false,
+            "Transform": false,
+            "Re-Architect": true
+          },
+          "approaches": [
+            "ARCHITECTURAL DIVERSITY",
+            "DESIGN DIVERSITY",
+            "SYNTHETIC DIVERSITY",
+            "INFORMATION DIVERSITY",
+            "PATH DIVERSITY",
+            "SUPPLY CHAIN DIVERSITY"
+          ]
+        },
+        {
+          "name": "DYNAMIC POSITIONING",
+          "defintion": "Distribute and dynamically relocate functionality or system resources",
+          "Purpose": "Increase the ability to rapidly recover from non-adversarial events (e.g., fires, floods) as well as from adversarial threat events (e.g., cyber-attacks). Impede an adversary’s ability to locate, eliminate, or corrupt mission or business assets, and cause the adversary to spend more time and effort finding the organization’s critical assets, thereby increasing the probability of the adversary revealing their presence, actions, and tradecraft prematurely.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": false,
+            "Continue": true,
+            "Constrain": true,
+            "Reconstitute": true,
+            "Understand": true,
+            "Transform": false,
+            "Re-Architect": false
+          },
+          "approaches": [
+            "FUNCTIONAL RELOCATION OF SENSORS",
+            "FUNCTIONAL RELOCATION OF CYBER RESOURCES",
+            "ASSET MOBILITY",
+            "FRAGMENTATION",
+            "DISTRIBUTED FUNCTIONALITY"
+          ]
+        },
+        {
+          "name": "NON-PERSISTENCE",
+          "defintion": "Generate and retain resources as needed or for a limited time.",
+          "Purpose": "Reduce exposure to corruption, modification, or compromise. In the case of adversarial threat events, provide a means of curtailing an adversary’s intrusion and advance and potentially removing malware or damaged resources from the system. Limit the availability of resources the adversary could target.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": true,
+            "Reconstitute": false,
+            "Understand": false,
+            "Transform": true,
+            "Re-Architect": true
+          },
+          "approaches": [
+            "NON-PERSISTENT INFORMATION",
+            "NON-PERSISTENT SERVICES",
+            "NON-PERSISTENT CONNECTIVITY"
+          ]
+        },
+        {
+          "name": "PRIVILEGE RESTRICTION",
+          "defintion": "Restrict privileges based on the attributes of users and system elements as well as on environmental factors.",
+          "Purpose": "Limit the impact and probability that unintended actions by authorized individuals will compromise information or services. Impede an adversary by requiring them to invest more time and effort in obtaining credentials. Curtail the adversary’s ability to take full advantage of credentials that they have obtained.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": true,
+            "Reconstitute": true,
+            "Understand": false,
+            "Transform": false,
+            "Re-Architect": false
+          },
+          "approaches": [
+            "TRUST-BASED PRIVILEGE MANAGEMENT",
+            "ATTRIBUTE-BASED USAGE RESTRICTION",
+            "DYNAMIC PRIVILEGES"
+          ]
+        },
+        {
+          "name": "REALIGNMENT",
+          "defintion": "Structure systems and resource uses to meet mission or business function needs, reduce current and anticipated risks, and accommodate the evolution of technical, operational, and threat environments.",
+          "Purpose": "Minimize the connections between mission-critical and non-critical services, thus reducing the likelihood that a failure of non-critical services will impact mission-critical services. Reduce the attack surface of the defending organization by minimizing the probability that non-mission or business functions could be used as an attack vector. Accommodate changing mission or business function needs. Accommodate changes in the technical environment.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": false,
+            "Reconstitute": false,
+            "Understand": false,
+            "Transform": true,
+            "Re-Architect": true
+          },
+          "approaches": [
+            "PURPOSING",
+            "OFFLOADING",
+            "RESTRICTION",
+            "REPLACEMENT",
+            "SPECIALIZATION",
+            "EVOLVABILITY"
+          ]
+        },
+        {
+          "name": "REDUNDANCY",
+          "defintion": "Provide multiple protected instances of critical resources.",
+          "Purpose": "Reduce the consequences of the loss of information or services. Facilitate recovery from the effects of an adverse cyber event. Limit the time during which critical services are denied or limited.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": true,
+            "Continue": true,
+            "Constrain": false,
+            "Reconstitute": true,
+            "Understand": false,
+            "Transform": true,
+            "Re-Architect": true
+          },
+          "approaches": [
+            "PROTECTED BACKUP AND RESTORE",
+            "SURPLUS CAPACITY",
+            "REPLICATION"
+          ]
+        },
+        {
+          "name": "SEGMENTATION",
+          "defintion": "Define and separate system elements based on criticality and trustworthiness.",
+          "Purpose": "Contain adversary activities and non-adversarial stresses (e.g., fires, floods) to the enclave, system segment, or facility in which they have established a presence. Limit the set of possible targets to which malware can be easily propagated.",
+          "Objectives": {
+            "Prevent/Avoid": true,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": true,
+            "Reconstitute": true,
+            "Understand": false,
+            "Transform": false,
+            "Re-Architect": true
+          },
+          "approaches": [
+            "PREDEFINED SEGMENTATION",
+            "DYNAMIC SEGMENTATION AND ISOLATION"
+          ]
+        },
+        {
+          "name": "SUBSTANTIATED INTEGRITY",
+          "defintion": "Ascertain whether critical system elements have been corrupted.",
+          "Purpose": "Facilitate the determination of correct results in case of conflicts between diverse services or inputs. Detect attempts by an adversary to deliver compromised data, software, or hardware, as well as successful modification or fabrication.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": false,
+            "Continue": true,
+            "Constrain": true,
+            "Reconstitute": true,
+            "Understand": true,
+            "Transform": false,
+            "Re-Architect": false
+          },
+          "approaches": [
+            "INTEGRITY CHECKS",
+            "PROVENANCE TRACKING",
+            "BEHAVIOR VALIDATION"
+          ]
+        },
+        {
+          "name": "UNPREDICTABILITY",
+          "defintion": "Make changes randomly or unpredictably.",
+          "Purpose": "Increase an adversary’s uncertainty regarding the system protections that they may encounter, thus making it more difficult for them to ascertain the appropriate course of action. Serve as a force multiplier for other techniques.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": false,
+            "Continue": true,
+            "Constrain": true,
+            "Reconstitute": true,
+            "Understand": true,
+            "Transform": false,
+            "Re-Architect": false
+          },
+          "approaches": [
+            "TEMPORAL UNPREDICTABILITY",
+            "CONTEXTUAL UNPREDICTABILITY"
+          ]
+        }
+      ],
+      
+      "NIST 800-160 Approaches": [
+        {
+          "name": "DYNAMIC RECONFIGURATION",
+          "defintion": "Make changes toindividual systems, system elements, components, or sets of resources to change functionality or behavior without interrupting service.",
+          "informal description": "Change how resources are or can be used.",
+          "discussion": "Reconfiguration needs to be executed without significantly degrading or interrupting service.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": false,
+            "Reconstitute": false,
+            "Understand": false,
+            "Transform": false,
+            "Re-Architect": false
+          }
+        },
+        {
+          "name": "DYNAMIC RESOURCE ALLOCATION",
+          "defintion": "Change the allocation of resources to tasks or functions without terminating critical functions or processes",
+          "informal description": "Change how much of a resource can be used.",
+          "discussion": "Reallocate resources to tasks or functions without terminating critical functions or processes.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": false,
+            "Reconstitute": false,
+            "Understand": false,
+            "Transform": false,
+            "Re-Architect": false
+          }
+        },
+        {
+          "name": "ADAPTIVE MANAGEMENT",
+          "defintion": "Change how mechanisms are used based on changes in the operational environment as well as changes in the threat environment.",
+          "informal description": "Change in response to change.",
+          "discussion": "Manage how mechanisms can be used based on changes in the operational environment as well as changes in the threat environment.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": false,
+            "Reconstitute": false,
+            "Understand": false,
+            "Transform": false,
+            "Re-Architect": false
+          }
+        },
+        {
+          "name": "MONITORING AND DAMAGE ASSESSMENT",
+          "defintion": "Monitor and analyze behavior and characteristics of components and resources to look for indicators of adversary activity or precursor conditions or indications of other threat events and to detect and assess damage from adversity.",
+          "informal description": "Look for indications that something might be awry and what damage might have occurred.",
+          "discussion": "Leverage Continuous Diagnostics and Mitigation (CDM) and other monitoring capabilities, including those related to health and status (H&S). Integrate with threat hunting and insider threat monitoring.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": false,
+            "Reconstitute": false,
+            "Understand": false,
+            "Transform": false,
+            "Re-Architect": false
+          }
+        },
+
+        {
+          "name": "SENSOR FUSION AND ANALYSIS",
+          "defintion": "Fuse and analyze monitoring data and analysis results from different information sources or at different times together with externally provided threat intelligence.",
+          "informal description": "Put the pieces together from many different sources.",
+          "discussion": "Consider all possible sources of monitoring information, including CDM, H&S, physical access logs, and insider threat monitoring.",
+          "Objectives": {
+            "Prevent/Avoid": false,
+            "Prepare": false,
+            "Continue": false,
+            "Constrain": false,
+            "Reconstitute": false,
+            "Understand": false,
+            "Transform": false,
+            "Re-Architect": false
+          }
+        },
+
+        {
+            "name": "FORENSIC AND BEHAVIORAL ANALYSIS",
+            "defintion": "Analyze indicators and adversary TTPs, including observed behavior, malware, and other artifacts left behind by adverse events.",
+            "informal description": "Analyze adversary activities and artifacts to develop an understanding and attribution of adversary goals, capabilities, and practices.",
+            "discussion": "Ensure that policies and practices are in place to capture evidence and support analysis.",
+            "Objectives": {
+              "Prevent/Avoid": false,
+              "Prepare": false,
+              "Continue": false,
+              "Constrain": false,
+              "Reconstitute": false,
+              "Understand": false,
+              "Transform": false,
+              "Re-Architect": false
+            }
+        }
+
+      
+
+        
+
+
+
+      ]
+    }
+  }
